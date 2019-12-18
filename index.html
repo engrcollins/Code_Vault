@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Web Archive</title>
+  <meta charset="UTF - 8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" rel="stylesheet" media='all'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script>
+    var siteWidth = 1280;
+	var scale = screen.width /siteWidth
+	document.querySelector('meta[name="viewport"]').setAttribute('content', 'width='+siteWidth+', initial-scale='+scale+'');
+  </script>
+  <style>
+	body{background-color:#e6e6ff;}
+	
+	header{position:fixed; width:100%; background-color:#ccccff; z-index:10;}
+	
+	.container-fluid{position:relative; top:130px; box-sizing: border-box;}
+	
+	.main{position:relative; top:130px;}
+	
+	.big{width:736px; height:375px; background-color:#ffeecc; align:center;}
+	
+	#footer{text-align:center; position:absolute; right:10px; font-family:cursive; font-size:10px; font-style:italic;}
+	
+
+	#table{position:relative; top:-18px; width:100%; height:87%; background-color:#fff3e6;}
+
+	a:hover{font-style:italic;}
+	
+	#bottom{text-align:center; position:inline; color:green;}
+	
+	.contact{position:relative;}
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1 align="center" height="10px"> 12 WEBPAGES IN 2 MONTHS</h1>
+  </header>
+    	  <div class="container-fluid" align="center">
+			<p>This is a collection of webpages built via self-study using Bootstrap and jQuery</p>
+		  </div>
+		  <div class="main table" align="center">
+			<table class='big' border="2px" cellpadding="2px">
+				<td>
+				  <h2 align="center"><font face='Consolas'><b>EXPLORE AND HAVE FUN</b></font></h2><br>
+				  <table id="table" border="2px" cellpadding="2px">
+					<tr>
+					  <td>
+						<ul><b><font size="3.5" face='Serif'>
+						  <li><b><a href='whack_a_mole.html' target='_blank'>Whack-A-Mole</a></b></li></br>
+						  <li><b><a href='bulb.html' target='_blank'>Toggle Bulb</a></b></li></br>
+						  <li><b><a href='#'>Tic-Tac-Toe</a></b></li></br>
+						  <li><b><a href='paper-rock-scissors.html' target='_blank'>Paper Rock & Scissors</a></b></li></br>
+						</font></b></ul>
+					  </td>
+					  <td>
+						<ul><b><font size="3.5" face='Serif'>
+						  <li><b><a href='etch-a-sketch.html' target='_blank'>Etch-A-Sketch</a></b></li></br>
+						  <li><b><a href='form-validation.html'>Form Validation</a></b></li></br>
+						  <li><b><a href='#'>Notepad</a></b></li></br>
+						  <li><b><a href='#'>Budget Management</a></b></li></br>
+						</b></font></ul>
+					  </td>
+					  <td>
+						<ul><b><font size="3.5" face='Serif'>
+						  <li><b><a href='#'>Countdown Timer</a></b></li></br>
+						  <li><b><a href='#'>Schedule Clock</a></b></li></br>
+						  <li><b><a href='#'>Love Calculator</a></b></li></br>
+						  <li><b><a href='#'>StopWatch</a></b></li></br>
+						</b></font></ul>
+					  </td>
+					</tr>
+				  </table>
+			</font>
+			</table>
+	<br>
+	<div id="bottom">
+      <p><a href='#'><span class="glyphicon glyphicon-home"></span> Home </a> &middot; <a href='#'><span class="glyphicon glyphicon-info-sign"></span> About Us </a> &middot; <a id='about' href='#'><span class="glyphicon glyphicon-envelope"></span> Contact Us</a></br></p>
+    </div>
+	<br>
+    <div id='footer'>
+      <P class='contact'><b>McCollins Technologies &COPY; 2018 - <script type="text/javascript">
+		<!--
+		var currentTime = new Date()
+		var year = currentTime.getFullYear()
+		document.write(year)
+		//-->
+	  </script>
+	  <br> akinbamicollins@gmail.com<br> +2348060887527, +233249371707</b></p>
+	  <script>
+		$(document).ready(function(){
+			$('#about').click(function(){
+				$('p.contact').animate({right: '1140px'}, 15000);
+				reload();
+			});
+		});
+		
+		function reload(){
+			$('p.contact').animate({left: '0px'}, 15000);
+		}
+	  </script>
+    </div>
+  </div>
+</body>
+</html>
+
+

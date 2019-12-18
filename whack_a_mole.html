@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Whack A Mole!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" rel="stylesheet" media='all'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script>
+    var siteWidth = 1280;
+	var scale = screen.width /siteWidth
+	document.querySelector('meta[name="viewport"]').setAttribute('content', 'width='+siteWidth+', initial-scale='+scale+'');
+  </script>
+  <link rel="stylesheet" href="./whack-a-mole/style.css">
+</head>
+<body>
+  <div class="wrapper">
+	
+	<header>
+		<h1>Whack-a-Mole</h1>
+		  <div id="info">
+		    <div class="score-box bg-info">
+				<h2>Mole</h2>
+				<p class="mole-out" id="mole-out">0</p>
+			</div><!-- end mole-box -->
+			<div class="score-box bg-info">
+				<h2>Score</h2>
+				<p class="score-out" id="score-out">0</p>
+			</div><!-- end score-box -->
+		    <div class="left-box bg-info">
+				<h3>Highest Score</h3>
+				<p class="high-score" id="high-score"><strong>0</strong></p>
+			</div><!-- end mole-box -->
+			<div class="left-box bg-info" id="timeLeft">
+				<h3>Time Left</h3>
+				<p class="timer" id="timer"> *** </p>
+			</div><!-- end score-box -->
+		  </div>
+	</header>
+	<main>
+		<script type="text/javascript" src="./whack-a-mole/script.js"></script>
+		<button type="button" class="btn btn-success" id="btnStart">Start Game</button>
+		<button type="button" class="btn btn-danger" id="btnStop" onclick='stop()'>Stop Game</button>
+		<div class="comment">
+		</div>
+		<div class="game-container">
+			<div class="row">
+				<div class="box">
+					<img src="./whack-a-mole/mole.png" alt="mole" class="mole-pic" id="mole-01">
+					<img src="https://res.michaelwhyte.ca/dirt.svg" alt="dirt" class="dirt-pic">
+					<div class="mask"></div><!-- end mask -->
+				</div><!-- end box -->
+				<div class="box">
+					<img src="./whack-a-mole/mole.png" alt="mole" class="mole-pic"
+					id="mole-02">
+					<img src="https://res.michaelwhyte.ca/dirt.svg" alt="dirt" class="dirt-pic">
+					<div class="mask"></div><!-- end mask -->
+				</div><!-- end box -->
+				<div class="box">
+					<img src="./whack-a-mole/mole.png" alt="mole" class="mole-pic"
+					id="mole-03">
+					<img src="https://res.michaelwhyte.ca/dirt.svg" alt="dirt" class="dirt-pic">
+					<div class="mask"></div><!-- end mask -->
+				</div><!-- end box -->
+			</div><!-- end row -->
+			<div class="row">
+				<div class="box">
+					<img src="./whack-a-mole/mole.png" alt="mole" class="mole-pic" id="mole-04">
+					<img src="https://res.michaelwhyte.ca/dirt.svg" alt="dirt" class="dirt-pic">
+					<div class="mask"></div><!-- end mask -->
+				</div><!-- end box -->
+				<div class="box">
+					<img src="./whack-a-mole/mole.png" alt="mole" class="mole-pic" id="mole-05">
+					<img src="https://res.michaelwhyte.ca/dirt.svg" alt="dirt" class="dirt-pic">
+					<div class="mask"></div><!-- end mask -->
+				</div><!-- end box -->
+				<div class="box">
+					<img src="./whack-a-mole/mole.png" alt="mole" class="mole-pic" id="mole-06">
+					<img src="https://res.michaelwhyte.ca/dirt.svg" alt="dirt" class="dirt-pic">
+					<div class="mask"></div><!-- end mask -->
+				</div><!-- end box -->
+			</div><!-- end row -->
+  		</div><!-- end game-container -->
+  
+	</main>
+	<footer>
+		<h2>Game Credits</h2>
+		<p>JavaScript code modified from code found at <a href="http://javascript30.com">JavaScript30</a></p>
+		<p>Mole images modified from images found at: <a href="https://www.raywenderlich.com/2560/cocos2d-tutorial-for-ios-how-to-create-a-mole-whacking-game-part-1">Cocos2D Tutorial for iOS: How To Create A Mole Whacking Game: Part 1/2</a></p>
+		<p>Dirt image from <a href="https://openclipart.org/detail/210414/misc-proto-dirt-pile">openclipart</a></p>
+	</footer>
+  </div><!-- end wrapper -->
+  <script type="text/javascript" src="./whack-a-mole/script.js"></script>
+    
+</body>
+
+</html>
+
