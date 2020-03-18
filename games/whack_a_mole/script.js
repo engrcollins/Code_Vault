@@ -66,13 +66,19 @@ window.onload = function(){
 }
 
 var W = class Whackmole {
-	constructor(start, moles, score, count, stop) {
+	constructor(start, moles, score, count, stop, first, second, third, name_1, name_2, name_3, player) {
 		this.bStart = start;
 		this.moles = moles;
 		this.scoreValue = score;
 		this.moleValue = count;
 		this.bStop = stop;
-		this.gameTime = 30000;
+		this.gameTime = 10000;
+		this.player = player;
+		this.name_list = [];
+		this.name_list.push(name_1.text(), name_2.text(), name_3.text());
+		this.score_list = [];
+		this.score_list.push(first.text(), second.text(), third.text());
+		
 
 		this.minPeepTime = 450
 		this.maxPeepTime = 1200;
@@ -95,11 +101,17 @@ var W = class Whackmole {
 	}
 
 	init() {
+		console.log(this.score_list)
+		console.log(this.name_list)
+		var hS = prompt("Please enter your name", "Player name");
+		if ((hS != null) || (hs !== "Player name")) {
+				this.playerName = hS;
+		}
+		console.log(this.playerName)
 		this.isPaused = false;
 		this.moleScored = 0;
 		this.moleCount = 0;
 		this.gameTime = 30000;
-
 		this.resume();
 
 	}
@@ -135,9 +147,26 @@ var W = class Whackmole {
 
 	stop() {
 		console.log('Game Stopped...');
+		console.log(this.moleScored);
+		if (this.moleScored > this.score_list[0]){
+			this.score_list[0] = this.moleScored;
+			this.name_list[0] = this.player;
+			this.score_list[0].text(this.moleScored);
+			this.name_list[0].text(this.player);
+			console.log(this.player, this.moleScored);
+		}else if(this.moleScored > this.score_list[1]){
+			this.score_list[1] = this.moleScored;
+			this.name_list[1] = this.player;
+			console.log(this.player, this.moleScored);
+		}else if(this.moleScored > this.score_list[2]){
+			this.score_list[2] = this.moleScored;
+			this.name_list[2] =  this.player;
+			console.log(this.player, this.moleScored);
+		}
 		this.moles.removeClass('up');
 		this.timeUp = true;
 		this.bStart.text('Start Game');
+		
 		clearTimeout(this.peepTimer);
 		clearTimeout(this.gameTimer);
 		clearInterval(this.downTimer);
@@ -172,18 +201,17 @@ var W = class Whackmole {
 	peep() {
 		const time = this._randomTime(this.minPeepTime, this.maxPeepTime);
 		const mole = this._randomMole(this.moles);
-		mole.attr('src', './whack-a-mole/mole.png');
-		console.log(mole.src)
+		mole.attr('src', './whack_a_mole/mole.png');
 		mole.addClass('up');
 		this.moleCount++;
 		this.scoreBoard(this.moleScored, this.moleCount);
-
 		this.peepTimer = setTimeout(() => {
-			console.log(mole.src);
 			mole.removeClass('up');
 			setTimeout(() => {
 				if (this.timeUp === false) {
 					this.peep();
+				}else{
+					this.stop();
 				}
 			}, 1000);
 		}, time);
@@ -216,6 +244,7 @@ var W = class Whackmole {
 	}
 
 	scoreBoard() {
+		this.player.text(this.playerName)
 		this.scoreValue.text(this.moleScored);
 		this.moleValue.text(this.moleCount);
 	}
@@ -225,16 +254,16 @@ var W = class Whackmole {
 		setTimeout(() => {
 			$('.content').css("background", "#e6f1ff");
 		}, 200);
-		mole.attr('src', './whack-a-mole/mole-whacked.png');
+		mole.attr('src', './whack_a_mole/mole-whacked.png');
 		game.moleScored++;
 		game.scoreBoard();
 		mole.removeClass('up');
 	}
 }
 /*(start, moles, score, count, stop, timing)*/
-var game = new W($('.btnStart'), $('.mole-pic'), $('.score-out'), $('.mole-out'), $('#btnStop'));
+var game = new W($('.btnStart'), $('.mole-pic'), $('.score-out'), $('.mole-out'), $('#btnStop'),
+	$('#first'), $('#second'), $('#third'), $('#name_first'), $('#name_second'), $('#name_third'), $('#btnPlayer'));
 game.bStart.click(function () {
-	alert(this.bStart);
 	if (game.bStart.text() === 'Start Game') {
 		game.init();
 	} else if (game.bStart.text() === 'Pause Game') {
@@ -245,12 +274,10 @@ game.bStart.click(function () {
 });
 
 game.bStop.click(function () {
-	console.log("done");
 	game.stop()
 });
 
 game.moles.click(function () {
 	game.bonk($(this));
 });
-
-//var highestScore = game.score();
+ 

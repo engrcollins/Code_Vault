@@ -1,192 +1,174 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Whack A Mole!</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" rel="stylesheet" media='all'>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
-		</script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-			<link rel="stylesheet" href="./whack-a-mole/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<script type="text/javascript" src="./whack_a_mole/script.js"></script>
+	<title>Games</title>
 </head>
-<body>
-	<div class="banner">
-		<header class="grid-header" onload="setDate()">
-			<div class="item1">
-				<h1 align="center">Code Vault</h1>
-				<h3 align="center" id="welcome">
-					<p class="date"></p>
-				</h3>
-			</div>
-		</header>
-		<div class="row container">
-			<!--LeftSide Column-->
-			<div class="leftSide col-2 col-s-3">
-				<nav class="navbar navbar-inverse">
-					<div class="container-fluid">
-						<div class="navbar-header">
-							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-							</button>
-						</div>
-						<div class="collapse navbar-collapse" id="myNavbar">
-							<ul class="nav navbar-nav">
-								<li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-								<li class="dropdown">
-									<a class="dropdown-toggle" data-toggle="dropdown" href="#">Categories<span class="caret"></span></a>
-									<ul class="dropdown-menu">
-										<li><a class="link" href="#">2021 &nbsp &nbsp <span class="badge">13</span></a></li>
-										<li><a class="link" href="#">2020 &nbsp &nbsp<span class="badge">13</span></a></li>
-										<li><a class="link" href="#">2019 &nbsp &nbsp<span class="badge">13</span></a></li>
-									</ul>
-								</li>
-								<li><a href="" target="_blank"><span class="glyphicon glyphicon-info-sign"></span> About Us</a></li>
-								<li><a href="#"><span class="glyphicon glyphicon-envelope"></span> Contact Us</a></li>
-								<li><a href="#"> Blog</a></li>
-							</ul>
-						</div>
-					</div>
-				</nav>
-			
-				<div class="search">
-					<input class="searchbar" name="searchbar" id="searchbar" type="text">
-					<button type="submit" for="searchbar" class="btn-primary"><span class="glyphicon glyphicon-search"></span> Search
-						Vault</button>
-				</div>
-				<br>
-			</div><!-- end leftSide-->
-			<!-- mainColumn-->
-			<div class="main col-8 col-s-8" align="center">
-				<h3 class="page">Welcome to Games</h3>
-				<h4 id="title">About Whack-a-Mole!</h4>
-					<p>Whack-a-mole is a popular amusement arcade game invented in 1976 by <a href="www.wikipedia.org/wiki/Aaron_Fechter">Aaron Fechter of Creative Engineering, Inc.</a> 
-						To play the game, use a mallet(mouse-click) to hit toy moles, which appear randomly, back into their holes. 
-						Each hit gives you 1 point while each miss gives no point. You have 20 seconds to hit as many moles as possible. 
-					</p><p>Let's play <b>Whack-a-Mole</b></p>
-				<div class="content">
-					<div class="indicator" id="info">
-						<div class="score-box bg-info">
-							<h3 align="center">Mole</h3>
-							<p class="mole-out" id="mole-out">0</p>
-						</div><!-- end mole-box -->
-						<div class="score-box bg-info">
-							<h3 align="center">Score</h3>
-							<p class="score-out" id="score-out">0</p>
-						</div><!-- end score-box -->
-						<div class="left-box bg-info">
-							<h4 align="center">Highest Score</h4>
-							<p class="high-score" id="high-score"><strong>0</strong></p>
-						</div><!-- end mole-box -->
-						<div class="left-box bg-info" id="timeLeft">
-							<h4 align="center">Time Left</h4>
-							<p class="timer" id="timer"> *** </p>
-						</div><!-- end score-box -->
-					</div><!-- end indicator -->
-					<div class="game-container">
-						<br>
-						<button type="button" class="btn btn-success btnStart">Start Game</button>
-						<button type="button" class="btn btn-danger" id="btnStop" onclick='stop()'>Stop Game</button>
-						<div class="comment">
-						</div>
-						<div class="playarea">
-							<div class="row">
-							<div class="box">
-								<img src="./whack-a-mole/mole.png" alt="mole" class="mole-pic" id="mole-01">
-								<img src="https://res.michaelwhyte.ca/dirt.svg" alt="dirt" class="dirt-pic">
-								<div class="mask"></div><!-- end mask -->
-							</div><!-- end box -->
-							<div class="box">
-								<img src="./whack-a-mole/mole.png" alt="mole" class="mole-pic" id="mole-02">
-								<img src="https://res.michaelwhyte.ca/dirt.svg" alt="dirt" class="dirt-pic">
-								<div class="mask"></div><!-- end mask -->
-							</div><!-- end box -->
-							<div class="box">
-								<img src="./whack-a-mole/mole.png" alt="mole" class="mole-pic" id="mole-03">
-								<img src="https://res.michaelwhyte.ca/dirt.svg" alt="dirt" class="dirt-pic">
-								<div class="mask"></div><!-- end mask -->
-							</div><!-- end box -->
-							</div><!-- end row -->
-							<div class="row">
-								<div class="box">
-									<img src="./whack-a-mole/mole.png" alt="mole" class="mole-pic" id="mole-04">
-									<img src="https://res.michaelwhyte.ca/dirt.svg" alt="dirt" class="dirt-pic">
-									<div class="mask"></div><!-- end mask -->
-								</div><!-- end box -->
-								<div class="box">
-									<img src="./whack-a-mole/mole.png" alt="mole" class="mole-pic" id="mole-05">
-									<img src="https://res.michaelwhyte.ca/dirt.svg" alt="dirt" class="dirt-pic">
-									<div class="mask"></div><!-- end mask -->
-								</div><!-- end box -->
-								<div class="box">
-									<img src="./whack-a-mole/mole.png" alt="mole" class="mole-pic" id="mole-06">
-									<img src="https://res.michaelwhyte.ca/dirt.svg" alt="dirt" class="dirt-pic">
-									<div class="mask"></div><!-- end mask -->
-								</div><!-- end box -->
-							</div><!-- end row -->
-						</div><!--end playarea-->
-					</div><!-- end game-container -->
-				</div><!--content-->
-			</div class="main"><!-- end mainColumn-->
-				<script type="text/javascript" src="./whack-a-mole/script.js"></script>
-	<!-- rightSide-->
-	<div class="rightSide col-2">
-		<h4 class="related">List of Games</h4>
-		<ul>
-				<li>Collins</li>
-				<li>Grace</li>
-		</ul>
 
-		<h4>Highest Scores</h4>
-		<or>
-			<li>Collins</li>
-			<li>Grace</li>
-		</or>
-	</div><!-- end rightSide-->
-</div><!-- end row Container-->
+<body>
+	<header class="grid-header" onload="setDate()">
+			<div class="item1 logo"></div>
+			<div class="item3 name"><p>CUB TAPESTRY</p></div>
+			<div class="item4 cub"></div>
+	</header>
+		<div class="item1">
+			<h3 align="center" id="welcome"><p class="date"></p</h3>
+		</div>
+	<div class="container">
+		<!--navigationBar Column-->
+			<nav class="row navbar navbar-inverse">
+				<div class="container-fluid">
+					<ul class="col-6 nav navbar-nav">
+						<li><a href="#">Home</a></li>
+							<li class="active"><a href="#">Categories</a>
+								<!-- dropdown menu -->
+								<ul class="dropdown nav nav-tabs">
+									<li><a href="#">Number Theory</a></li>
+									<li class="active"><a href="#">Games</a></li>
+									<li><a href="#">Poems</a></li>
+									<li><a href="#">Accessories</a></li>
+									<li><a href="#">Life Hacks</a></li>
+									<li><a href="#">jokes</a></li>
+									<li><a href="#">Nerds' Corner</a></li>
+									<li><a href="#">Latest Geek Trends</a></li>
+									<li><a href="#">Tech Facts</a></li>
+								</ul>
+							</li>
+							<li><a href="" target="_blank">About Us</a></li>
+							<li><a href="#">Contact Us</a></li>
+							<li><a href="#"> Blog </a></li>
+					</ul>
+					<div class="col-6  search">
+						<input class="searchbox" name="searchbox" id="searchbox" type="text" placeholder="Search Vault"/>
+						<button type="submit" class="searchbutton"><span class="glyphicon glyphicon-search"></span></button>
+				</div>
+			</div>
+			</nav><!-- end navigationBar-->
+			<h2 class="pageWelcome">Welcome to Games</h2>
+			<div class="first_row row">
+					<div class="leftSide col-3 col-s-3">
+						<h4 align="center">List of Games</h4>
+							<or id="page_menu_list"  class="nav nav-pills nav-stacked">
+								<li class="active"><a href="#">whack-a-mole</a></li>
+								<li><a href="#">Paper Rock & Scissors</a></li>
+								<li><a href="#">Word puzzle</a></li>
+								<li><a href="#">Etch-a-sketch</a></li>
+								<li><a href="#">Tic-Tac-Toe</a></li>
+								<li><a href="#">Love Calculator</a></li>
+							</or>
+					</div><!--end leftSide-->
+					<div class=" rightSide col-7 col-s-7">
+						<h3 id="title">About Whack-a-Mole!</h3>
+							<p>Whack-a-mole is a popular amusement arcade game invented in 1976 by <a href="www.wikipedia.org/wiki/Aaron_Fechter">Aaron Fechter of Creative Engineering, Inc.</a>
+								To play the game, use a mallet(mouse-click) to hit toy moles, which appear randomly, back into their holes.
+								Each hit gives you 1 point while each miss gives no point. You have 20 seconds to hit as many moles as possible.
+							</p>
+							<div class="content">
+								<button type="button" class="btn btn-success btnStart">Start Game</button>
+								<button type="button" class="btn btn-danger" id="btnStop" onclick='stop()'>Stop Game</button>
+								<Button type="button" class="btn btn-info" id="btnPlayer">Emi</button>
+								<br>
+								<div class="indicator" id="info">
+									<div class="score-box bg-info">
+										<h3 align="center">Mole</h3>
+										<p class="mole-out" id="mole-out">0</p>
+									</div><!-- end mole-box -->
+								<div class="score-box bg-info">
+									<h3 align="center">Score</h3>
+									<p class="score-out" id="score-out">0</p>
+								</div><!-- end score-box -->
+								<div class="left-box bg-info" id="timeLeft">
+									<h4 align="center">Time Left</h4>
+									<p class="timer" id="timer"> *** </p>
+								</div><!-- end score-box -->
+								<div class="left-box bg-info">
+									<h4 align="center">Highest Score</h4>
+									<p class="high-score" id="high-score"><strong>0</strong></p>
+								</div><!-- end mole-box -->
+							</div><!-- end indicator -->
+							<div align="center" class="game-container">
+								<div class="comment">
+								</div>
+								<div class="playarea">
+									<div class="row">
+									<div class="box">
+										<img src="./whack_a_mole/mole.png" alt="mole" class="mole-pic" id="mole-01">
+										<img src="https://res.michaelwhyte.ca/dirt.svg" alt="dirt" class="dirt-pic">
+										<div class="mask"></div><!-- end mask -->
+									</div><!-- end box -->
+									<div class="box">
+										<img src="./whack_a_mole/mole.png" alt="mole" class="mole-pic" id="mole-02">
+										<img src="https://res.michaelwhyte.ca/dirt.svg" alt="dirt" class="dirt-pic">
+										<div class="mask"></div><!-- end mask -->
+									</div><!-- end box -->
+									<div class="box">
+										<img src="./whack_a_mole/mole.png" alt="mole" class="mole-pic" id="mole-03">
+										<img src="https://res.michaelwhyte.ca/dirt.svg" alt="dirt" class="dirt-pic">
+										<div class="mask"></div><!-- end mask -->
+									</div><!-- end box -->
+									</div><!-- end row -->
+									<div class="row">
+										<div class="box">
+											<img src="./whack_a_mole/mole.png" alt="mole" class="mole-pic" id="mole-04">
+											<img src="https://res.michaelwhyte.ca/dirt.svg" alt="dirt" class="dirt-pic">
+											<div class="mask"></div><!-- end mask -->
+										</div><!-- end box -->
+										<div class="box">
+											<img src="./whack_a_mole/mole.png" alt="mole" class="mole-pic" id="mole-05">
+											<img src="https://res.michaelwhyte.ca/dirt.svg" alt="dirt" class="dirt-pic">
+											<div class="mask"></div><!-- end mask -->
+										</div><!-- end box -->
+										<div class="box">
+											<img src="./whack_a_mole/mole.png" alt="mole" class="mole-pic" id="mole-06">
+											<img src="https://res.michaelwhyte.ca/dirt.svg" alt="dirt" class="dirt-pic">
+											<div class="mask"></div><!-- end mask -->
+										</div><!-- end box -->
+									</div><!-- end row -->
+								</div><!--end playarea-->
+							</div><!-- end game-container -->
+						</div><!--content-->
+						</div>
+						<div class="col-2 col-s-2" style="margin-top: 50px;">
+							<ul id="scorers">
+								<p class="name_scorer label label-success" id="name_first">Olanike &emsp;
+									<span class="name_scorer badge" id="first" style="width: 25px; height: 27px; background: #dbf7e2;">1</span></p>
+								<p class=" name_scorer label label-success" id="name_second" style="opacity: 0.65;">Collins &emsp;
+									<span class="name_scorer badge" id="second" style="width: 25px; height: 27px; background: #dbf7e2;">8</span></p>
+								<p class="name_scorer label label-success" id="name_third" style="opacity: 0.40;">Wuraola &emsp;
+									<span class="name_scorer badge" id="third" style="width: 25px; height: 27px; background: #dbf7e2;">2</span></p>
+							</ul>
+						</div>	
+			<script type="text/javascript" src="./whack_a_mole/script.js"></script>
+	</div><!-- end row Container-->
 <div class="game_credit">
 		<h5>Game Credits</h5>
 		<p>JavaScript code modified from code found at <a href="http://javascript30.com">JavaScript30</a></p>
 </div>
 
 <div class="foot" id="footmarg">
-	<div class="contact">
-		<h5><b>Contact us:</b></h5>
-		<h6>McCollins Technologies.</h6>
-			<p>Mail: mccollinstechnologies@gmail.com.</p>
-			<p>Phones: +2348060887527, +233249371707.</p>
-			<p>follow us on: Twitter, facebbok, Instagram, Quora, Medium.</p>
+
+	<div class="" id="footlinks">
+		<p> <a href='#'><span class="glyphicon glyphicon-info-sign"></span> About Us </a> |
+			<a id='about' href='#'><span class="glyphicon glyphicon-envelope"></span> Contact Us</a> |
+			<a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a> | <a href="#">FAQ</a> | <a href="#">Advertise</a>
+		</p>
+		</br></br>
+		<p id="copyright">McCollins Technologies <p>Mail: mccollinstechnologies@gmail.com.</p>
+			<p>Follow us on: <a href="#">Twitter</a>, <a href="#">facebbok</a>, <a href="#">Instagram</a>,
+				<a href="#">Quora</a>, <a href="#">Medium.</a></p> &COPY; 2019 -
+			<script type="text/javascript">
+				var currentTime = new Date()
+				var year = currentTime.getFullYear()
+				document.write(year)
+			</script>
+		</p>
 	</div>
-			
-	<div class="gap">
-
 	</div>
-
-	<div class="disclaimer">
-				<h6><b>Disclaimer</b></h6>
-				<p>Every member of The Woke Library is solely responsible for </p>
-				<p>anything they post or upload
-					on the library forum</p>
-	</div>
-</div>
-<div class="" id="footlinks">
-	<h4>
-
-	</h4>
-	<p> <a href='#'><span class="glyphicon glyphicon-info-sign"></span> About Us </a> |
-		<a id='about' href='#'><span class="glyphicon glyphicon-envelope"></span> Contact Us</a> |
-		<a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a> | <a href="#">FAQ</a> | <a href="#">Advertise</a>
-	</p>
-	<p id="copyright">McCollins Technologies &COPY; 2019 -
-		<script type="text/javascript">
-						var currentTime = new Date()
-						var year = currentTime.getFullYear()
-						document.write(year)
-		</script>
-	</p>
-</div>
-</body>
-</html>
-
+	</body>
+	
+	</html>

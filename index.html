@@ -12,142 +12,133 @@
 
 <body>
 	<header class="grid-header" onload="setDate()">
+			<div class="item1 logo"></div>
+			<div class="item3 name"><p>CUB TAPESTRY</p></div>
+			<div class="item4 cub"></div>
+	</header>
 		<div class="item1">
-			<h1 align="center">Code Vault</h1>
 			<h3 align="center" id="welcome"><p class="date"></p</h3>
 		</div>
-	</header>
-	<div class="row container">
-		<!--LeftSide Column-->
-		<div class="leftSide col-2 col-s-3">
-			<nav class="navbar navbar-inverse">
+	<div class="container">
+		<!--navigationBar Column-->
+			<nav class="row navbar navbar-inverse">
 				<div class="container-fluid">
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-					</div>
-					<div class="collapse navbar-collapse" id="myNavbar">
-						<ul class="nav navbar-nav">
-							<li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-							<li class="dropdown">
-								<a class="dropdown-toggle" data-toggle="dropdown" href="#">Categories<span class="caret"></span></a>
-								<ul class="dropdown-menu">
-									<li><a class="link" href="#">2021 &nbsp &nbsp <span class="badge">13</span></a></li>
-									<li><a class="link" href="#">2020 &nbsp &nbsp<span class="badge">13</span></a></li>
-									<li><a class="link" href="#">2019 &nbsp &nbsp<span class="badge">13</span></a></li>
-								</ul>
-							</li>
-							<li><a href="" target="_blank"><span class="glyphicon glyphicon-info-sign"></span> About Us</a></li>
-							<li><a href="#"><span class="glyphicon glyphicon-envelope"></span> Contact Us</a></li>
-							<li><a href="#"> Blog</a></li>
-						</ul>
+					<ul class="col-6 nav navbar-nav">
+						<li class="active"><a href="#">Home</a></li>
+						<li><a href="#">Categories</a>
+							<!-- dropdown menu -->
+							<ul class="dropdown nav nav-tabs">
+								<li><a href="./number_theory/factorial.html" target="_blank">Number Theory</a></li>
+								<li><a href="./games/whack_a_mole.html" target="_blank">Games</a></li>
+								<li><a href="#"  target="_blank">Poems</a></li>
+								<li><a href="#"  target="_blank">Accessories</a></li>
+								<li><a href="#"  target="_blank">Life Hacks</a></li>
+								<li><a href="#" target="_blank">jokes</a></li>
+								<li><a href="#" target="_blank">Nerds' Corner</a></li>
+								<li><a href="#" target="_blank">Latest Geek Trends</a></li>
+								<li><a href="#" target="_blank">Tech Facts</a></li>
+							</ul>
+						</li>
+						<li><a href="" target="_blank">About Us</a></li>
+						<li><a href="#" target="_blank">Contact Us</a></li>
+						<li><a href="#" target="_blank"> Blog </a></li>
+					</ul>
+					<div class="col-6  search">
+						<input class="searchbox" name="searchbox" id="searchbox" type="text" placeholder="Search Vault" />
+						<button type="submit" class="searchbutton"><span class="glyphicon glyphicon-search"></span></button>
 					</div>
 				</div>
-			</nav>
-
-			<div class="search">
-				<input class="searchbar" name="searchbar" id="searchbar" type="text">
-				<button type="submit" for="searchbar" class="btn-primary"><span class="glyphicon glyphicon-search"></span> Search Vault</button>
-			</div>
-				<br>
-		</div><!-- end leftSide-->
+			</nav><!-- end navigationBar-->
 		<!-- mainColumn-->
-		<div class="main col-7 col-s-8" align="center">
-			<h3 align="center" id="welcome">Welcome To Code Vault</h3>
+		<div class="main" align="center">
+			<h3 align="center" class="">Welcome To Code Vault</h3>
 			<div class="content">
 				<div class="indicator">
 						
 				</div>
 				<div class="panel-group">
 					<div class="panel-info">
-						<div class="panel-heading">Number Theory</div>
-							<div class="panel-body"></div>
+						<div class="panel-heading"><a href="./number_theory/factorial.html" target="_blank">Number Theory</a></div>
+							<div class="panel-body">A branch of pure mathematics devoted primarily to the study of the integers and integer-valued functions.
+								 Principle concepts include square numbers and higher powers of numbers, prime numbers, divisibility of numbers, and 
+								 greatest common divisiors. This section contains Euclidean algorithm(one of the earliest tools for studying number theory) amongst 
+								 other practical concepts of number theory. <a href="#">Explore and have fun.</a>
+							</div>
 					</div>
 
 					<div class="panel-info">
 						<div class="panel-heading"><a href="./games/whack_a_mole.html" target="_blank">Games</a></div>
-							<div class="panel-body"></div>
-					</div>
+							<div class="panel-body">Explore our list of simple-but fun-filled games. Games in this board include; whack_a_mole, Paper Rock & Scissors,
+								Word puzzle, Etch-a-sketch, Tic-Tac-Toe, Love Calculator etc. Enjoy!</div>
+							</div>
 
 					<div class="panel-info">
-						<div class="panel-heading">Accessories</div>
-							<div class="panel-body"></div>
-					</div>
+						<div class="panel-heading"><a href="#" target="_blank">Accessories</a></div>
+							<div class="panel-body">This board provides a list of day to day accessories like Simple Calculator, BMI Calculator, Budget Management, To-Do List,
+								Notepad, Schedule Clock, Stop watch, Countdown Timer, e.t.c.</div>
+							</div>
 
 					<div class="panel-info">
-						<div class="panel-heading">Jokes</div>
-							<div class="panel-body"></div>
-					</div>
+						<div class="panel-heading"><a href="#"  target="_blank">Poems</a></div>
+							<div class="panel-body">We have a list of fascinating poems on various topics from various sources. feel free to read and enjoy.</div>
+							</div>
 
 					<div class="panel-info">
-						<div class="panel-heading">Number Theory</div>
-							<div class="panel-body"></div>
-					</div>
+						<div class="panel-heading"><a href="#"  target="_blank">Jokes</a></div>
+							<div class="panel-body">The site would be a boring one without some touches of banters. We have featured a number of
+								tech-inclined jokes too.</div>
+							</div>
 
 					<div class="panel-info">
-						<div class="panel-heading">Games</div>
-							<div class="panel-body"></div>
-					</div>
+						<div class="panel-heading"><a href="#"  target="_blank">Life Hacks</a></div>
+							<div class="panel-body">Explore our list of interesting Life Hacks. Apparently, we learn everyday.</div>
+							</div>
 
 					<div class="panel-info">
-						<div class="panel-heading">Accessories</div>
-							<div class="panel-body"></div>
-					</div>
+						<div class="panel-heading"><a href="#" target="_blank">Nerds' Corner</a></div>
+							<div class="panel-body">Check the profiles of nerds in and out of our team.  While  a few of them directly contributed, others have actually 
+							been rich source of motivation towards the development of this project.</div>
+							</div>
 
-					<div class="panel-info">
-						<div class="panel-heading">Jokes</div>
-							<div class="panel-body"></div>
-					</div>
+						<div class="panel-info">
+							<div class="panel-heading"><a href="#" target="_blank">Tech Facts</a></div>
+							<div class="panel-body">Find tech fun facts in this section.</div>
+						</div>
 
 				</div>
 			</div>
 		</div><!-- end mainColumn-->
-		<!-- rightSide-->
-		<div class="rightSide col-3">
-			<h4 class="related">Related Topics</h4>
-		</div><!-- end rightSide-->
 	</div><!-- end row Container-->
 
-		<div class="foot" id="footmarg">
-			<div class="contact">
-				<h5><b>Contact us:</b></h5>
-				<h6>McCollins Technologies.</h6>
+	<div class="foot" id="footmarg">
+		<!--<div class="contact">
+			<h5><b>Contact us:</b></h5>
+			<h6>McCollins Technologies.</h6>
 				<p>Mail: mccollinstechnologies@gmail.com.</p>
 				<p>Phones: +2348060887527, +233249371707.</p>
 					<p>follow us on: Twitter, facebbok, Instagram, Quora, Medium.</p>
-			</div>
-			
-			<div class="gap">
+			</div>-->
 
-			</div>
-
-			<div class="disclaimer">
-				<h6><b>Disclaimer</b></h6>
-				<p>Every member of The Woke Library is solely responsible for </p>
-				<p>anything they post or upload
-					on the library forum</p>
-			</div>
-		</div>
-
-		<div class="" id="info">
+		<div class="" id="footlinks">
 			<p> <a href='#'><span class="glyphicon glyphicon-info-sign"></span> About Us </a> |
 				<a id='about' href='#'><span class="glyphicon glyphicon-envelope"></span> Contact Us</a> |
 				<a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a> | <a href="#">FAQ</a> | <a href="#">Advertise</a>
 			</p>
-			<p id="copyright">McCollins Technologies &COPY; 2019 -
+			</br></br>
+			<p id="copyright">McCollins Technologies <p>Mail: mccollinstechnologies@gmail.com.</p>
+				<p>Follow us on: <a href="#">Twitter</a>, <a href="#">facebbok</a>, <a href="#">Instagram</a>,
+					<a href="#">Quora</a>, <a href="#">Medium.</a></p> &COPY; 2019 -
 				<script type="text/javascript">
 					var currentTime = new Date()
 					var year = currentTime.getFullYear()
 					document.write(year)
 				</script>
-				</p>
+			</p>
 		</div>
-	</div>
-</body>
-</html>
+		</div>
+		</body>
+		
+		</html>
 
 	
 
