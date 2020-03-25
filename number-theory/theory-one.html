@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="number-theory.css" type="text/css">
+	<title>Number Thoery</title>
+</head>
+
+<body>
+	<header class="grid-header" onload="setDate()">
+			<div class="item1 logo"><img src="../materials/header1.png"></div>
+			<div align="right" class="item4 cub"><img src="../materials/header2.png"></div>
+	</header>
+		<div class="item1">
+			<h3 align="center" id="welcome"><p class="date"></p</h3>
+		</div>
+	<div class="container">
+		<!--navigationBar Column-->
+			<nav class="row navbar navbar-inverse">
+				<div class="container-fluid">
+					<ul class="col-6 nav navbar-nav">
+						<li class=""><a href="../index.html">Home</a></li>
+						<li class="active"><a href="#">Categories</a>
+							<!-- dropdown menu -->
+							<ul class="dropdown nav nav-tabs">
+								<li class="active"><a href="./theory-one.html" target="_blank">Number Theory</a></li>
+								<li><a href="../algorithms/binary-search.html" target="_blank">Simple Algorithms</a></li>
+								<li><a href="../games/whack_a_mole.html" target="_blank">Games</a></li>
+								<li><a href="#"  target="_blank">Poems</a></li>
+								<li><a href="#"  target="_blank">Calculators and Accessories</a></li>
+								<li><a href="#"  target="_blank">Life Hacks</a></li>
+								<li><a href="#" target="_blank">Jokes</a></li>
+								<li><a href="#" target="_blank">Nerds' Corner</a></li>
+							</ul>
+						</li>
+						<li><a href="../about.html" target="_blank">About Us</a></li>
+						<li><a href="#">Contact Us</a></li>
+					</ul>
+					<div class="col-6  search">
+						<input class="searchbox" name="searchbox" id="searchbox" type="text" placeholder="Search Tapestry" />
+						<button type="submit" class="searchbutton"><span class="glyphicon glyphicon-search"></span></button>
+					</div>
+				</div>
+			</nav><!-- end navigationBar-->
+		<!-- mainColumn-->
+		<div class="main" align="center">
+			<h2 class="pageWelcome">Welcome to Number Theory</h2>
+				<div class="first_row row">
+						<div class="leftSide col-3 col-s-3">
+							<h4 align="center">List of Topics</h4>
+								<or id="page_menu_list"  class="nav nav-pills nav-stacked">
+									<li class="intro topic-pill active"><a href="#.reload()">Introduction</a></li>
+									<li class="parity topic-pill" onclick="Parity()"><a>Parity</a></li>
+									<li class="prime topic-pill" onclick="Prime()"><a>Prime Number and Factor</a></li>
+									<li class="factorial topic-pill" onclick="Factorial()"><a>Factorial</a></li>
+								</or>
+						</div><!--end leftSide-->
+
+						<div class=" rightSide col-7 col-s-7">
+							<p>A branch of pure mathematics devoted primarily to the study of the integers and integer-valued functions.
+								Principle concepts include square numbers and higher powers of numbers, prime numbers, divisibility of numbers, and greatest common divisiors. Explore and have fun.</p>
+						</div>
+
+						<div class="col-2 col-s-2" style="margin-top: 50px;">
+						</div>	
+	<script type="text/javascript" src="./theory-one.js"></script>
+	</div>
+</div><!-- end row Container-->
+<div class="game_credit">
+<h5>Credits</h5>
+<p></p>
+</div>
+
+<div class="foot" id="footmarg">
+
+<div class="" id="footlinks">
+<p> <a href='#'><span class="glyphicon glyphicon-info-sign"></span> About Us </a> |
+<a id='about' href='#'><span class="glyphicon glyphicon-envelope"></span> Contact Us</a> |
+<a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a> | <a href="#">FAQ</a> | <a href="#">Advertise</a>
+</p>
+</br></br>
+<p id="copyright">McCollins Technologies <p>Mail: mccollinstechnologies@gmail.com.</p>
+<p>Follow us on: <a href="https://twitter.com/engrcollins14" target="_blank">Twitter</a>,
+	<a href="" https://facebook.com/engrcollins14" target="_blank"">Facebook</a>,
+	<a href=" https://qr.ae/TmZyQH" target="_blank">Quora</a>, <a href="https://medium.com">Medium.</a></p> &COPY; 2019 -
+<script type="text/javascript">
+	var currentTime = new Date()
+	var year = currentTime.getFullYear()
+	document.write(year)
+</script>
+</p>
+</div>
+</div>
+</body>
+
+</html>

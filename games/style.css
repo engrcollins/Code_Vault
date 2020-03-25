@@ -6,7 +6,7 @@
 
 body{ 
 	background: whitesmoke;
-	padding: 0px 2px 0px 6px;
+	padding: 0px -3px 0px 6px;
 	overflow-x: hidden;
 }
 
@@ -66,76 +66,70 @@ header{
 	background-color: #69d2f9;
 	z-index: 1;
 	padding:  2px;
+	display: flex;
   }
-  
-  .grid-header{
-	  display: grid;
-	  grid-template-columns: 35% auto 26%;
-  }
-  
-  .logo{
-	  background-image: url('./materials/header1.png');
-	  background-repeat: no-repeat;
-	  height: 100%;
-  }
-  
-  .name{
-	  margin: 0px 0px;
-  }
-  
-  .name p{
-	  font-family: Helvetica;
-	  font-weight: bolder;
-	  font-size: 32px;
-	  left: 25px;
-	  text-decoration: solid;
-	  margin: 50px 4px 4px -15px;
-	  letter-spacing: 2px;
-  }
-  
-  .cub{
-	  background: url('./materials/header2.png');
-	  background-repeat: no-repeat;
-	  height: 100%;
-  }
-  
-  #welcome{
-	  background-color: #f2f2f2;
-	  padding: 2px 0px;
-	  margin: 2px 0px;
-	  height: 10px;
-	  width: 100%;
-	  font-family: Trebuchet MS, Geneva;
-	  font-size: 18px;
-	  text-align: center;
-	  color: #196666;
-	  font-weight: bold;
-  }
-  
-  .container{
-	  min-height: 600px;
-	  min-width: 99.99%;
-	  margin: 3px 1px;
-	  padding: 10px 4px 1px 0px;
-  }
-  
-  .navbar{
-	  padding: 1px 5px;
-  }
-  
-  .container-fluid{
-	  top: 1px;
-	  width: 99.99%;
-	  padding: 5px;
-	  float: left;
-	  font-size: 15px;
-	  border-radius: 18px;
-  }
-  
+
+.logo{
+	flex-grow: 1;
+	padding-right: 15px;	
+}
+
+.cub{
+	flex-shrink: 1;
+	margin-left: -40px;
+
+	
+
+}
+
+.cub p{
+	font-family: Helvetica;
+	font-weight: bolder;
+	font-size: 28px;
+	text-align: center;
+	text-decoration: solid;
+	margin: 50px 4px 4px -200px;
+	letter-spacing: 2px;
+}
+
+#welcome{
+	background-color: #f2f2f2;
+	padding: 2px 0px;
+	margin: 2px 0px;
+	height: 10px;
+	width: 100%;
+	font-family: Trebuchet MS, Geneva;
+	font-size: 18px;
+	text-align: center;
+	color: #196666;
+	font-weight: bold;
+	letter-spacing: -1.2px;
+}
+
+.container{
+	min-height: 600px;
+	min-width: 100%;
+	margin: 3px 1px;
+	padding: 10px 2px 1px 2px;
+}
+
+.navbar{
+	padding: 1px 5px;
+}
+
+.container-fluid{
+	top: 1px;
+	width: 99.90%;
+	padding: 5px;
+	float: left;
+	font-size: 15px;
+	border-radius: 18px;
+}
+
 .navbar-nav{
 	height: 42px;
 	padding: 3px;
-	margin-right: -50px;
+	margin-right: -45px;
 }
   
 .navbar-nav li {
@@ -242,7 +236,7 @@ header{
 	top: 2px;
 	margin-left: 2px;
 	padding: 3px;
-	max-width: 99%;
+	max-width: 99.99%;
 	text-align: left;
 	font-family: 'Times New Roman', Times, serif;
 	font-size:14px ;
@@ -250,7 +244,7 @@ header{
 }
 
 .content {
-  max-width: 99%;
+  max-width: 99.99%;
   text-align: center;
   border: 2px solid black;
 
@@ -271,7 +265,7 @@ header{
 }
 
 .game-container{
-		width: 98%;
+		width: 99.90%;
 		height: 80%;
 }
 
@@ -342,30 +336,31 @@ header{
 
 
 .playarea {
-	width: 90%;
+  width: 100%;
   background: rgb(234, 236, 226);
+  padding: 1px 6px 1px 0px;
+  
 }
 
 .playarea .row{
-	width: 99%;
-	margin-left: 5px;
+	width: 100%;
 	display: flex;
 }
 
 
 .box {
-	width: 200px;
+	width: 205px;
 	height: 170px;
-	padding: 6px;
+	padding: 5px;
 	float: left;
 	position: relative;
-	overflow: hidden;
+	overflow-y: hidden;
 }
 
 .mole-pic {
-	width: 80px;
+	width: 77px;
 	position: absolute;
-	left: 50px;
+	left: 46px;
 	bottom: -78px;
 	transition: bottom 0.5s ease;
 }
@@ -387,6 +382,7 @@ header{
 	position: absolute;
 	bottom: 0;
 	left: 0;
+	height: 55px;
 	z-index: 9999;
 }
 
@@ -407,7 +403,7 @@ header{
 #footmarg{
 	width: 100%;
 	min-height: 120px;
-  background-color: black;
+	background-color: black;
 	display: flex;
 	flex-wrap: wrap;
 	margin-top: 1px;

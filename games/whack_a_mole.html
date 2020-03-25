@@ -12,9 +12,8 @@
 
 <body>
 	<header class="grid-header" onload="setDate()">
-			<div class="item1 logo"></div>
-			<div class="item3 name"><p>CUB TAPESTRY</p></div>
-			<div class="item4 cub"></div>
+			<div class="item1 logo"><img src="../materials/header1.png"></div>
+			<div align="right" class="item4 cub"><img src="../materials/header2.png"></div>
 	</header>
 		<div class="item1">
 			<h3 align="center" id="welcome"><p class="date"></p</h3>
@@ -24,31 +23,31 @@
 			<nav class="row navbar navbar-inverse">
 				<div class="container-fluid">
 					<ul class="col-6 nav navbar-nav">
-						<li><a href="#">Home</a></li>
-							<li class="active"><a href="#">Categories</a>
-								<!-- dropdown menu -->
-								<ul class="dropdown nav nav-tabs">
-									<li><a href="#">Number Theory</a></li>
-									<li class="active"><a href="#">Games</a></li>
-									<li><a href="#">Poems</a></li>
-									<li><a href="#">Accessories</a></li>
-									<li><a href="#">Life Hacks</a></li>
-									<li><a href="#">jokes</a></li>
-									<li><a href="#">Nerds' Corner</a></li>
-									<li><a href="#">Latest Geek Trends</a></li>
-									<li><a href="#">Tech Facts</a></li>
-								</ul>
-							</li>
-							<li><a href="" target="_blank">About Us</a></li>
-							<li><a href="#">Contact Us</a></li>
-							<li><a href="#"> Blog </a></li>
+						<li class=""><a href="../index.html">Home</a></li>
+						<li class="active"><a href="#">Categories</a>
+							<!-- dropdown menu -->
+							<ul class="dropdown nav nav-tabs">
+								<li><a href="../number_theory/factorial.html" target="_blank">Number Theory</a></li>
+								<li><a href="../algorithms/binary_search.html" target="_blank">Simple Algorithms</a></li>
+								<li class="active"><a href="./games/whack_a_mole.html" target="_blank">Games</a></li>
+								<li><a href="#"  target="_blank">Poems</a></li>
+								<li><a href="#"  target="_blank">Calculators and Accessories</a></li>
+								<li><a href="#"  target="_blank">Life Hacks</a></li>
+								<li><a href="#" target="_blank">Jokes</a></li>
+								<li><a href="#" target="_blank">Nerds' Corner</a></li>
+							</ul>
+						</li>
+						<li><a href="../about.html" target="_blank">About Us</a></li>
+						<li><a href="#">Contact Us</a></li>
 					</ul>
 					<div class="col-6  search">
-						<input class="searchbox" name="searchbox" id="searchbox" type="text" placeholder="Search Vault"/>
+						<input class="searchbox" name="searchbox" id="searchbox" type="text" placeholder="Search Tapestry" />
 						<button type="submit" class="searchbutton"><span class="glyphicon glyphicon-search"></span></button>
+					</div>
 				</div>
-			</div>
 			</nav><!-- end navigationBar-->
+		<!-- mainColumn-->
+		<div class="main" align="center">
 			<h2 class="pageWelcome">Welcome to Games</h2>
 			<div class="first_row row">
 					<div class="leftSide col-3 col-s-3">
@@ -95,7 +94,7 @@
 								<div class="comment">
 								</div>
 								<div class="playarea">
-									<div class="row">
+									<div align="center" class="row">
 									<div class="box">
 										<img src="./whack_a_mole/mole.png" alt="mole" class="mole-pic" id="mole-01">
 										<img src="https://res.michaelwhyte.ca/dirt.svg" alt="dirt" class="dirt-pic">
@@ -159,8 +158,10 @@
 		</p>
 		</br></br>
 		<p id="copyright">McCollins Technologies <p>Mail: mccollinstechnologies@gmail.com.</p>
-			<p>Follow us on: <a href="#">Twitter</a>, <a href="#">facebbok</a>, <a href="#">Instagram</a>,
-				<a href="#">Quora</a>, <a href="#">Medium.</a></p> &COPY; 2019 -
+			<p>Follow us on: <a href="https://twitter.com/engrcollins14" target="_blank">Twitter</a>,
+				<a href="" https://facebook.com/engrcollins14" target="_blank"">Facebook</a>,
+								<a href=" https://qr.ae/TmZyQH" target="_blank">Quora</a>, <a href="https://medium.com">Medium.</a></p> &COPY;
+			2019 -
 			<script type="text/javascript">
 				var currentTime = new Date()
 				var year = currentTime.getFullYear()

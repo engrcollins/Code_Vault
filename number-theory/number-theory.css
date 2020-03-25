@@ -165,18 +165,18 @@ header{
 	z-index: 1;
   }
   
-.navbar-nav li .dropdown li {
+  .navbar-nav li .dropdown li {
 	background: rgb(213, 216, 213);
 	font-weight: bold;
 	clear: both;
 	width: 120%;
   }
 
-.search{
-	padding: 6px 50px 1px 5px;
-	display: flex;
-	float: right;
-}
+  .search{
+		padding: 6px 50px 1px 5px;
+		display: flex;
+		float: right;
+  }
 #searchbox{
 	background-color: #ffffcc;
 	width: 60%;
@@ -203,9 +203,38 @@ header{
 	background: #4D94FF;
 }
 
+.pageWelcome{
+  margin: 1px;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.first_row{
+	padding: 4px 15px;
+}
+
+.rightSide{
+	padding: 6px 4px;
+	font-size: 15px;
+}
+
+.leftSide{
+	padding: 2px 25px 5px 2px;
+	font-size: 17px;
+	text-align: justify;
+	border: none;
+}
+
+.nav-pills li{
+	background: white;
+	padding: 0px;
+	margin: -5px 2px;
+}
+
 .main{
-	margin: 0px 50px;
-	padding: 1px;
+	top: 2px;
+	margin-left: 2px;
+	padding: 3px;
 	max-width: 99%;
 	text-align: left;
 	font-family: 'Times New Roman', Times, serif;
@@ -213,79 +242,89 @@ header{
 	font-weight: 525;
 }
 
+.leftSide li:hover {
+	cursor: pointer;
+}
+
 .content {
-  max-width: 99%;
+  max-width: 100%;
   text-align: center;
+	border: 2px solid black;
+	min-height: 300px;
 }
 
 .indicator {
-  background-color: #85d9fa;;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  text-align: center;
-}
-
-
-.panel-group{
-  display: flex;
-  flex-wrap: wrap;
-  border-radius: 5px;
-  text-align: center;
-  padding: 1px;
-}
-
-.panel-info{
-  border: 1px solid rgb(65, 64, 64);
-  border-radius: 3px ;
-	margin: 4px 1px;
-	width: 250px;
-	height: 270px;
-	flex-grow: 1;
-	flex-shrink: 1;
-}
-
-.panel-heading{
-	font-size: 18px;
-	margin-bottom: -1px;
-}
-
-.panel-body{
-	text-align: justify;
-	padding: 1px 5px;
-}
-
-.panel-footer{
-	font-style: italic;
-	font-size: 12px;
-}
-
-
-.contact{
+	text-align: center;
+	width: 98%;
+	margin: 8px 4px 1px 2px;
 	padding: 1px;
-	width: auto;
+}
+
+#title{
+	text-align: left;
+	color: #3761eb;
+	font-family: Comic Sans MS;
+}
+
+#contentRow{
+	margin-left: 1px;
+	width: 100%;
+	display: flex;
+}
+
+.contentLeft{
+	margin: 4px 3px;
+	padding: 2px;
+	width: 52%;
+}
+
+.contentRight{
+	margin: 5px 2px;
+	padding: 4px;
+	width: 42%;
+}
+
+.output .result{
+	font-weight: bold;
+	font-size: 20px;
+
+}
+
+.game_credit{
+  text-align: center;
+  margin: 15px;
 }
 
 #footmarg{
 	width: 100%;
 	min-height: 120px;
-  background-color: black;
+  	background-color: black;
 	display: flex;
 	flex-wrap: wrap;
-	margin-top: 1px;
+	margin: 1px 1px 0px -2px;
 	padding: 1px 1px;
 	color: white;
 	font-size: 12px;
 	line-height: 7px;
-	 border: 2px solid green;
+	border: 2px solid green;
  }
 
 #footlinks{
-	width: 100%;
-	padding: 1px;000
-	margin-top: 2px;
-	text-align: center;
-	background-color: black;
+  width: 100%;
+  padding: 1px;
+  margin-top: 2px;
+  text-align: center;
+  background-color: black;
 	color: white;
 	font-size: 12px;
 }
+
+.indicator p {
+	animation: fadeEffect 1s; /* Fading effect takes 1 second */
+  }
+  
+  /* Go from zero to full opacity */
+  @keyframes fadeEffect {
+	from {opacity: 0;}
+	to {opacity: 1;}
+  }
