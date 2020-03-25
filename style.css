@@ -131,7 +131,6 @@ header{
 	height: 42px;
 	padding: 3px;
 	margin-right: -45px;
-	border: 2px white solid;
 }
   
 .navbar-nav li {
@@ -144,7 +143,6 @@ header{
 	top: -6px;
 	text-decoration: none;
 	transition-duration: 0.4s;
-	border: 2px white solid;
   }
 
 .navbar-nav li:hover {
