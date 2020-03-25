@@ -114,6 +114,7 @@ header{
 }
 
 .navbar{
+	margin: 1px;
 	padding: 1px 5px;
 }
 
@@ -135,13 +136,15 @@ header{
 .navbar-nav li {
 	display: block;
 	float: left;
-	margin-top: 0px;
-	padding: 0px;
+	margin: 0px -9px 0px 0px;
+	padding: -26px;
+	width: fit-content;
 	position: relative;
 	top: -6px;
 	text-decoration: none;
 	transition-duration: 0.4s;
   }
+
 
 .navbar-nav li:hover {
 	cursor: pointer;
